@@ -1,0 +1,27 @@
+server:
+  port: 8080
+logging:
+  level:
+    org:
+      springframework:
+        web: ERROR
+        boot:
+          web: ERROR
+          actuate: ERROR
+        jdbc: ERROR
+      hibernate: ERROR
+spring:
+  jpa:
+    open-in-view: true
+    hibernate.ddl-auto: none
+    show-sql: false
+    database: H2
+    properties.hibernate.physical_naming_strategy: cn.jian.util.HibernatePhysicalNamingNamingStrategy
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:~/testdb
+    username: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
