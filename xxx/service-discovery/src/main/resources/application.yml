@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: servicediscovery
+server:
+  port: 8260
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    wait-time-in-ms-when-sync-empty: 5
+logging:
+  level:
+    '[org.springframework]': INFO
